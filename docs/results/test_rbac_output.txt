@@ -1,0 +1,15 @@
+PASS  app_developer  expect ALLOWED  got ALLOWED  SELECT * FROM v_project_risk_summary LIMIT 1
+PASS  app_developer  expect ALLOWED  got ALLOWED  CALL get_my_remediation(1)
+PASS  app_developer  expect DENIED   got DENIED   SELECT * FROM vulnerability LIMIT 1
+PASS  app_developer  expect DENIED   got DENIED   UPDATE remediation SET status='OPEN' WHERE 1=0
+PASS  app_developer  expect DENIED   got DENIED   SELECT * FROM audit_log LIMIT 1
+PASS  app_analyst    expect ALLOWED  got ALLOWED  SELECT * FROM vulnerability LIMIT 1
+PASS  app_analyst    expect ALLOWED  got ALLOWED  UPDATE remediation SET status='OPEN' WHERE 1=0
+PASS  app_analyst    expect ALLOWED  got ALLOWED  CALL get_affected_projects('CVE-2022-24999')
+PASS  app_analyst    expect DENIED   got DENIED   SELECT * FROM audit_log LIMIT 1
+PASS  app_analyst    expect DENIED   got DENIED   SELECT password_hash FROM app_user LIMIT 1
+PASS  app_analyst    expect DENIED   got DENIED   DELETE FROM vulnerability WHERE 1=0
+PASS  app_admin      expect ALLOWED  got ALLOWED  SELECT * FROM audit_log LIMIT 1
+PASS  app_admin      expect ALLOWED  got ALLOWED  SELECT user_id, email FROM app_user LIMIT 1
+PASS  app_auth       expect ALLOWED  got ALLOWED  CALL auth_lookup('admin@example.com')
+PASS  app_auth       expect DENIED   got DENIED   SELECT * FROM app_user LIMIT 1
