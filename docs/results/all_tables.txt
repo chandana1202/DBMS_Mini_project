@@ -1,0 +1,148 @@
++---------+------------+-------------------+------------------+---------------+---------------------+
+| user_id | full_name  | email             | role             | password_hash | created_at          |
++---------+------------+-------------------+------------------+---------------+---------------------+
+|       1 | Asha Nair  | asha@example.com  | DEVELOPER        | NULL          | 2026-11-11 16:32:34 |
+|       2 | Ravi Kumar | ravi@example.com  | DEVELOPER        | NULL          | 2026-11-11 16:32:34 |
+|       3 | Meera Iyer | meera@example.com | SECURITY_ANALYST | NULL          | 2026-11-11 16:32:34 |
+|       4 | Admin User | admin@example.com | ADMIN            | NULL          | 2026-11-11 16:32:34 |
++---------+------------+-------------------+------------------+---------------+---------------------+
++------------+----------------+----------+----------------------------------------+------------+-------------+---------------------+
+| project_id | name           | owner_id | repo_url                               | language   | criticality | created_at          |
++------------+----------------+----------+----------------------------------------+------------+-------------+---------------------+
+|          1 | WebShop        |        1 | https://github.com/demo/webshop        | JavaScript | HIGH        | 2026-11-11 16:32:34 |
+|          2 | AdminPortal    |        2 | https://github.com/demo/adminportal    | JavaScript | MEDIUM      | 2026-11-11 16:32:34 |
+|          3 | PaymentService |        1 | https://github.com/demo/paymentservice | Java       | CRITICAL    | 2026-11-11 16:32:34 |
+|          4 | DataPipeline   |        2 | https://github.com/demo/datapipeline   | Python     | MEDIUM      | 2026-11-11 16:32:34 |
+|          5 | BlogEngine     |        1 | https://github.com/demo/blogengine     | Python     | LOW         | 2026-11-11 16:32:34 |
+|          6 | InternalTools  |        2 | https://github.com/demo/internaltools  | JavaScript | LOW         | 2026-11-11 16:32:34 |
++------------+----------------+----------+----------------------------------------+------------+-------------+---------------------+
++------------+------------------+-----------+------------------+
+| package_id | name             | ecosystem | maintainer       |
++------------+------------------+-----------+------------------+
+|          1 | express          | npm       | expressjs        |
+|          2 | body-parser      | npm       | expressjs        |
+|          3 | qs               | npm       | ljharb           |
+|          4 | lodash           | npm       | lodash           |
+|          5 | axios            | npm       | axios            |
+|          6 | follow-redirects | npm       | follow-redirects |
+|          7 | log4j-core       | Maven     | apache           |
+|          8 | log4j-api        | Maven     | apache           |
+|          9 | spring-boot      | Maven     | vmware           |
+|         10 | requests         | PyPI      | psf              |
+|         11 | urllib3          | PyPI      | urllib3          |
+|         12 | flask            | PyPI      | pallets          |
+|         13 | werkzeug         | PyPI      | pallets          |
+|         14 | lib-a            | npm       | demo             |
+|         15 | lib-b            | npm       | demo             |
++------------+------------------+-----------+------------------+
++------------+------------+------------+--------------+---------------+
+| version_id | package_id | version_no | release_date | is_deprecated |
++------------+------------+------------+--------------+---------------+
+|          1 |          1 | 4.16.0     | 2018-09-28   |             0 |
+|          2 |          1 | 4.18.2     | 2022-10-08   |             0 |
+|          3 |          2 | 1.18.3     | 2018-05-14   |             0 |
+|          4 |          2 | 1.20.1     | 2022-10-06   |             0 |
+|          5 |          3 | 6.5.2      | 2018-05-16   |             0 |
+|          6 |          3 | 6.11.0     | 2022-09-08   |             0 |
+|          7 |          4 | 4.17.15    | 2019-07-19   |             0 |
+|          8 |          4 | 4.17.21    | 2021-02-20   |             0 |
+|          9 |          5 | 0.21.0     | 2020-10-23   |             0 |
+|         10 |          5 | 1.6.0      | 2023-10-26   |             0 |
+|         11 |          6 | 1.13.0     | 2020-09-02   |             0 |
+|         12 |          6 | 1.15.4     | 2023-12-29   |             0 |
+|         13 |          7 | 2.14.1     | 2021-03-06   |             0 |
+|         14 |          7 | 2.17.1     | 2021-12-28   |             0 |
+|         15 |          8 | 2.14.1     | 2021-03-06   |             0 |
+|         16 |          8 | 2.17.1     | 2021-12-28   |             0 |
+|         17 |          9 | 2.5.0      | 2021-05-20   |             0 |
+|         18 |          9 | 2.7.0      | 2022-05-19   |             0 |
+|         19 |         10 | 2.25.0     | 2020-11-11   |             0 |
+|         20 |         10 | 2.31.0     | 2023-05-22   |             0 |
+|         21 |         11 | 1.26.4     | 2021-03-15   |             0 |
+|         22 |         11 | 1.26.18    | 2023-10-17   |             0 |
+|         23 |         12 | 2.0.0      | 2021-05-11   |             0 |
+|         24 |         13 | 2.0.0      | 2021-05-11   |             0 |
+|         25 |         14 | 1.0.0      | 2022-01-01   |             0 |
+|         26 |         15 | 1.0.0      | 2022-01-01   |             0 |
++------------+------------+------------+--------------+---------------+
++------------+------------+---------------------+
+| project_id | version_id | added_at            |
++------------+------------+---------------------+
+|          1 |          1 | 2026-11-11 16:32:34 |
+|          1 |          7 | 2026-11-11 16:32:34 |
+|          2 |          7 | 2026-11-11 16:32:34 |
+|          2 |          9 | 2026-11-11 16:32:34 |
+|          3 |         17 | 2026-11-11 16:32:34 |
+|          4 |         19 | 2026-11-11 16:32:34 |
+|          5 |         23 | 2026-11-11 16:32:34 |
+|          6 |         25 | 2026-11-11 16:32:34 |
++------------+------------+---------------------+
++-------------------+------------------+
+| parent_version_id | child_version_id |
++-------------------+------------------+
+|                 1 |                3 |
+|                 3 |                5 |
+|                 9 |               11 |
+|                17 |               13 |
+|                13 |               15 |
+|                19 |               21 |
+|                23 |               24 |
+|                26 |               25 |
+|                25 |               26 |
++-------------------+------------------+
++---------+----------------+----------------------------------------------------------------+------------+----------+----------------+
+| vuln_id | cve_id         | description                                                    | cvss_score | severity | published_date |
++---------+----------------+----------------------------------------------------------------+------------+----------+----------------+
+|       1 | CVE-2021-44228 | Log4Shell: remote code execution via JNDI lookup in log4j-core |       10.0 | CRITICAL | 2021-12-10     |
+|       2 | CVE-2022-24999 | qs prototype pollution allowing denial of service              |        7.5 | HIGH     | 2022-11-26     |
+|       3 | CVE-2021-23337 | lodash command injection via template function                 |        7.2 | HIGH     | 2021-02-15     |
+|       4 | CVE-2020-28168 | axios server-side request forgery via redirects                |        5.9 | MEDIUM   | 2020-11-06     |
+|       5 | CVE-2023-43804 | urllib3 leaks Cookie header on cross-origin redirect           |        8.1 | HIGH     | 2023-10-04     |
+|       6 | CVE-2023-25577 | werkzeug multipart parsing denial of service                   |        7.5 | HIGH     | 2023-02-14     |
+|       7 | CVE-2023-26159 | follow-redirects improper URL input validation                 |        6.1 | MEDIUM   | 2024-01-02     |
++---------+----------------+----------------------------------------------------------------+------------+----------+----------------+
++---------+------------+
+| vuln_id | version_id |
++---------+------------+
+|       2 |          5 |
+|       3 |          7 |
+|       4 |          9 |
+|       7 |         11 |
+|       1 |         13 |
+|       5 |         21 |
+|       6 |         24 |
++---------+------------+
++----------+---------+------------------+--------------+------------------------------------+
+| patch_id | vuln_id | fixed_version_id | release_date | notes                              |
++----------+---------+------------------+--------------+------------------------------------+
+|        1 |       1 |               14 | 2021-12-28   | Upgrade log4j-core to 2.17.1       |
+|        2 |       2 |                6 | 2022-09-08   | Upgrade qs to 6.11.0               |
+|        3 |       3 |                8 | 2021-02-20   | Upgrade lodash to 4.17.21          |
+|        4 |       4 |               10 | 2023-10-26   | Upgrade axios to 1.6.0             |
+|        5 |       5 |               22 | 2023-10-17   | Upgrade urllib3 to 1.26.18         |
+|        6 |       7 |               12 | 2023-12-29   | Upgrade follow-redirects to 1.15.4 |
++----------+---------+------------------+--------------+------------------------------------+
++----------------+------------+---------+--------+-------------+----------+-------------+
+| remediation_id | project_id | vuln_id | status | assigned_to | due_date | resolved_at |
++----------------+------------+---------+--------+-------------+----------+-------------+
+|              1 |          1 |       2 | OPEN   |        NULL | NULL     | NULL        |
+|              2 |          1 |       3 | OPEN   |        NULL | NULL     | NULL        |
+|              3 |          2 |       3 | OPEN   |        NULL | NULL     | NULL        |
+|              4 |          2 |       4 | OPEN   |        NULL | NULL     | NULL        |
+|              5 |          2 |       7 | OPEN   |        NULL | NULL     | NULL        |
+|              6 |          3 |       1 | OPEN   |        NULL | NULL     | NULL        |
+|              7 |          4 |       5 | OPEN   |        NULL | NULL     | NULL        |
+|              8 |          5 |       6 | OPEN   |        NULL | NULL     | NULL        |
++----------------+------------+---------+--------+-------------+----------+-------------+
++--------+-------------+-----------+-----------+---------------------------------------------------+----------------+
+| log_id | table_name  | operation | record_id | new_data                                          | changed_by     |
++--------+-------------+-----------+-----------+---------------------------------------------------+----------------+
+|      1 | remediation | INSERT    |         1 | {"status": "OPEN", "vuln_id": 2, "project_id": 1} | root@localhost |
+|      2 | remediation | INSERT    |         2 | {"status": "OPEN", "vuln_id": 3, "project_id": 1} | root@localhost |
+|      3 | remediation | INSERT    |         3 | {"status": "OPEN", "vuln_id": 3, "project_id": 2} | root@localhost |
+|      4 | remediation | INSERT    |         4 | {"status": "OPEN", "vuln_id": 4, "project_id": 2} | root@localhost |
+|      5 | remediation | INSERT    |         5 | {"status": "OPEN", "vuln_id": 7, "project_id": 2} | root@localhost |
+|      6 | remediation | INSERT    |         6 | {"status": "OPEN", "vuln_id": 1, "project_id": 3} | root@localhost |
+|      7 | remediation | INSERT    |         7 | {"status": "OPEN", "vuln_id": 5, "project_id": 4} | root@localhost |
+|      8 | remediation | INSERT    |         8 | {"status": "OPEN", "vuln_id": 6, "project_id": 5} | root@localhost |
++--------+-------------+-----------+-----------+---------------------------------------------------+----------------+

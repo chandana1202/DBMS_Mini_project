@@ -1,0 +1,32 @@
+PASS  wrong password is rejected
+PASS  unknown email is rejected
+PASS  API without a session returns 401
+PASS  protected page without a session redirects to /login
+PASS  all four demo users can log in
+PASS  developer sees own remediation  (4 rows)
+PASS  developer cannot update another owner's item (procedure refuses)  Not your project, or remediation not found
+PASS  developer blocked from analyst API
+PASS  developer blocked from admin API
+PASS  developer opening /admin is sent to /forbidden
+PASS  MySQL itself denies developer reading vulnerability table
+PASS  analyst traces CVE through recursive procedure  express@4.16.0 -> body-parser@1.18.3 -> qs@6.5.2
+PASS  analyst updates remediation
+PASS  analyst blocked from admin API
+PASS  MySQL itself denies analyst reading audit_log
+PASS  analyst report critical
+PASS  analyst report fixes
+PASS  analyst report unpatched
+PASS  analyst report outdated
+PASS  admin registers CVE, trigger sets CRITICAL  opened for: WebShop
+PASS  duplicate CVE is rejected  Duplicate entry 'CVE-2024-88888' for key 'vulnerability.cve_id'
+PASS  bad CVE format rejected by CHECK constraint  Check constraint 'chk_cve_format' is violated.
+PASS  audit log records the analyst's email
+PASS  admin deletes CVE
+PASS  Mongo $graphLookup finds WebShop at depth 3
+PASS  Mongo note created
+PASS  Mongo note read
+PASS  Mongo note updated
+PASS  Mongo note deleted
+PASS  developer blocked from Mongo API
+
+30 passed, 0 failed

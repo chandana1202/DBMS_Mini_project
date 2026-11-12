@@ -1,0 +1,140 @@
+{
+  _id: 'WebShop',
+  direct_deps: [
+    'express@4.16.0',
+    'lodash@4.17.15'
+  ]
+}
+[
+  {
+    _id: 'WebShop',
+    owner: 'Asha Nair',
+    closure_size: 4
+  },
+  {
+    _id: 'AdminPortal',
+    owner: 'Ravi Kumar',
+    closure_size: 3
+  },
+  {
+    _id: 'PaymentService',
+    owner: 'Asha Nair',
+    closure_size: 3
+  },
+  {
+    _id: 'DataPipeline',
+    owner: 'Ravi Kumar',
+    closure_size: 2
+  },
+  {
+    _id: 'BlogEngine',
+    owner: 'Asha Nair',
+    closure_size: 2
+  },
+  {
+    _id: 'InternalTools',
+    owner: 'Ravi Kumar',
+    closure_size: 2
+  }
+]
+[
+  {
+    _id: 'WebShop',
+    exposure_depth: Long('3'),
+    vulnerable_component: [
+      'qs@6.5.2'
+    ]
+  }
+]
+[
+  {
+    _id: 'CVE-2023-25577',
+    cve_id: 'CVE-2023-25577',
+    severity: 'HIGH'
+  }
+]
+[
+  {
+    _id: 'HIGH',
+    count: 4,
+    avg_cvss: 7.575
+  },
+  {
+    _id: 'MEDIUM',
+    count: 2,
+    avg_cvss: 6
+  },
+  {
+    _id: 'CRITICAL',
+    count: 1,
+    avg_cvss: 10
+  }
+]
+[
+  {
+    _id: ObjectId('6af4964ac64ef7fd7e7dcabd'),
+    project: 'WebShop',
+    cve_id: 'CVE-2022-24999',
+    status: 'IN_PROGRESS',
+    severity: 'HIGH'
+  },
+  {
+    _id: ObjectId('6af4964ac64ef7fd7e7dcabe'),
+    project: 'WebShop',
+    cve_id: 'CVE-2021-23337',
+    status: 'OPEN',
+    severity: 'HIGH'
+  },
+  {
+    _id: ObjectId('6af4964ac64ef7fd7e7dcabf'),
+    project: 'AdminPortal',
+    cve_id: 'CVE-2021-23337',
+    status: 'OPEN',
+    severity: 'HIGH'
+  },
+  {
+    _id: ObjectId('6af4964ac64ef7fd7e7dcac2'),
+    project: 'PaymentService',
+    cve_id: 'CVE-2021-44228',
+    status: 'IN_PROGRESS',
+    severity: 'CRITICAL'
+  },
+  {
+    _id: ObjectId('6af4964ac64ef7fd7e7dcac3'),
+    project: 'DataPipeline',
+    cve_id: 'CVE-2023-43804',
+    status: 'OPEN',
+    severity: 'HIGH'
+  },
+  {
+    _id: ObjectId('6af4964ac64ef7fd7e7dcac4'),
+    project: 'BlogEngine',
+    cve_id: 'CVE-2023-25577',
+    status: 'OPEN',
+    severity: 'HIGH'
+  }
+]
+[
+  {
+    _id: ObjectId('6af4964ac64ef7fd7e7dcac5'),
+    cve_id: 'CVE-2021-44228',
+    text: 'Log4Shell is actively exploited. Patch PaymentService first.',
+    author: 'meera@example.com',
+    tags: [
+      'exploited',
+      'urgent',
+      'reviewed'
+    ],
+    created_at: ISODate('2026-11-11T16:22:34.342Z')
+  }
+]
+Rejected by $jsonSchema: Plan executor error during update :: caused by :: Document failed validation
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+Transaction skipped (standalone server, not a replica set): This MongoDB deployment does not support retryable writes. Please add retryWrites=false to your connection string.
