@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* Design tokens: a calm "security console" palette. Severity colours are the
+   only loud colours, so risk is what the eye finds first. */
+@theme {
+  --color-paper: #f3f4f6;
+  --color-surface: #ffffff;
+  --color-ink: #1b2433;
+  --color-muted: #5b6676;
+  --color-line: #dce0e6;
+  --color-accent: #1d5c63;
+  --color-accent-soft: #e3eff0;
+
+  --color-crit: #9f1c1c;
+  --color-crit-soft: #fbe9e7;
+  --color-high: #b5470b;
+  --color-high-soft: #fdf0e6;
+  --color-med: #8a6100;
+  --color-med-soft: #fbf5df;
+  --color-low: #2f6b3f;
+  --color-low-soft: #e8f3ea;
+
+  --font-sans: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", "SF Mono", Consolas, "Liberation Mono", monospace;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+table {
+  border-collapse: collapse;
+}
